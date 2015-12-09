@@ -1,0 +1,10 @@
+<div class="tags-systematic">
+	<div ng-repeat-start="category in categories" class="panel panel-default">
+		<div class="panel-heading">{{category.categoryName}}</div>
+		
+		<div class="panel-body">
+			<button ng-repeat="tag in category.tags | filter: query" class="btn btn-tag" ng-click="go(tag.tagName);">{{tag.tagName}}&nbsp;<span class="badge">{{tag.tagCount}}</span></button>
+		</div>
+	</div>
+	<div ng-repeat-end=""></div>
+</div>

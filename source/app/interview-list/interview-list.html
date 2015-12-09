@@ -1,0 +1,78 @@
+<div class="container-fluid">
+	<!-- Navigation bar -->
+	<div class="navbar navbar-default navbar-fixed-top">
+		
+		<div class="brand">
+			<h1 class="brand text-center"><a class="brand" href="#/statements">Fu-PusH Statement Finder</a></h1>
+		</div>
+		
+		<!-- Search Bar -->
+		<div class="form-group searchbar visible-xs-block">
+			<input ng-model="query" type="search" class="form-control input-lg" placeholder="Suche Interview">
+		</div>
+		
+		<div class="input-group input-group-lg searchbar hidden-xs">
+			<span class="input-group-addon" id="sizing-addon1">Suche Interview</span>
+			<input ng-model="query" type="search" class="form-control" placeholder="Suchbegriff eingeben" aria-describedby="sizing-addon1">
+		</div>
+		
+		<!-- Status Bar -->
+		<p class="status-bar">
+			&nbsp;<span ng-show="filterTags[0] || interviewTag.number!=0 || disciplineTag.name!='' || groupTag.name!=''">Aktive Filter:
+			
+			<span ng-show="groupTag.name!=''" class="label label-meta cursor-pointer" ng-click="clearGroupTag()">{{groupTag.name}} <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+			<span ng-show="disciplineTag.name!=''" class="label label-meta cursor-pointer" ng-click="clearDisciplineTag()">{{disciplineTag.name}} <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+			<span ng-show="interviewTag.number!=0" class="label label-meta cursor-pointer" ng-click="clearInterviewTag()">Interview {{interviewTag.number}} <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+			<span ng-repeat="filterTag in filterTags | orderBy" class="label label-tag cursor-pointer" ng-click="clearTag(filterTag)">{{filterTag}} <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span></span>
+		</p>
+		
+		<!-- Tabs -->
+		<ul class="nav nav-tabs">
+			<li role="presentation"><a href="#/statements"><span class="hidden-xs">Statements</span><span class="glyphicon glyphicon-list visible-xs-inline"></span></a></li>
+			<li role="presentation"><a href="#/tags"><span class="hidden-xs">Tags</span><span class="glyphicon glyphicon-tags visible-xs-inline"></span></a></li>
+			<li role="presentation" class="active"><a href="#/interviews"><span class="hidden-xs">Interviews</span><span class="glyphicon glyphicon-comment visible-xs-inline"></span></a></li>
+			<li role="presentation"><a href="#/about"><span class="hidden-xs">About</span><span class="glyphicon glyphicon-info-sign visible-xs-inline"></span></a></li>
+		</ul>
+
+	</div>
+	
+	<!-- List of Interviews -->
+	<div class="content">
+		<div class="order-by">
+			<uib-tabset>
+				<uib-tab ng-click="setOrder('id')" heading="Interviewnummer"></uib-tab>
+				<uib-tab ng-click="setOrder('group')" heading="Gruppe"></uib-tab>
+				<uib-tab ng-click="setOrder('discipline')" heading="Fachgebiet"></uib-tab>
+			</uib-tabset>
+		</div>
+		
+		<div ng-repeat="interview in interviews | filter: query | orderBy: orderBy as filtered" class="col-lg-3 col-md-4 col-sm-6">
+			<div class="interview-entry">
+				<div class="list-group cursor-pointer" ng-click="go(interview.id)">
+					<div href="#" class="list-group-item list-group-item-linkable">
+					<h4 class="list-group-item-heading">Interview {{interview.id}} <span class="badge pull-right">{{interview.count}}</span></h4>
+					<p class="list-group-item-text">
+				<table>
+					<tr>
+						<td>Gruppe:</td>
+						<td><span class="label label-meta label-table cursor-pointer" ng-click="gotoGroup(interview.group); $event.stopPropagation();">{{interview.group}}</span></td>
+					</tr>
+					<tr>
+						<td>Fachgebiet:</td>
+						<td><span class="label label-meta label-table cursor-pointer" ng-click="gotoDiscipline(interview.discipline); $event.stopPropagation();">{{interview.discipline}}</span></td>
+					</tr>
+				</table>
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Show the following info when there are no search results -->
+	<div class="container">
+		<div class="jumbotron" ng-show="interviews && !filtered.length">
+			<p class="text-center">Es wurden keine mit Ihrer Suchanfrage übereinstimmenden Interviews gefunden.</p>
+		</div>
+	</div>
+</div>

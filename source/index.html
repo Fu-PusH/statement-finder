@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de" data-ng-app="app">
+	<head>
+		
+		<meta charset="utf-8">
+		<title>Fu-PusH Statement Finder</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- build:css css/app.css -->
+		<!-- FuPusH Atomizer -->
+		<link rel="stylesheet" href="css/atomizer.css">
+		<!-- endbuild -->
+
+	</head>
+	
+	<body>
+		<!-- Wrap all page content here, except the footer -->
+		<div id="wrap">
+			
+			<div data-ng-view data-autoscroll="true"></div>
+			
+			<!-- Make place for the footer -->
+			<div id="push"></div>
+		</div>
+
+		<!-- Sticky footer -->
+		<footer>
+			<div class="container-fluid">
+				<p class="imprint-link text-right"><a href="#/imprint">Impressum</a></p>
+			</div>
+		</footer>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+		
+		<!-- build:js js/lib.js -->
+		<!-- Anuglar Bootstrap UI -->
+		<script src="vendor/ui-bootstrap-tpls-0.14.2.min.js"></script>
+		
+		<!-- 3d party Modules -->
+		<script src="vendor/angulike.js"></script>
+		<script src="vendor/dirPagination.js"></script>
+		<!-- endbuild -->
+		
+		<!-- build:js js/app.js -->
+		<!-- App module -->
+		<script src="app/app.module.js"></script>
+
+		<!-- Core module -->
+		<script src="app/core/core.module.js"></script>
+		
+		<script src="app/core/data-services/statementdata.service.js"></script>
+		<script src="app/core/data-services/tagdata.service.js"></script>
+		<script src="app/core/data-services/categorydata.service.js"></script>
+		<script src="app/core/data-services/interviewdata.service.js"></script>
+		<script src="app/core/filters/filter-by-tag.js"></script>
+		<script src="app/core/filters/filter-by-interview.js"></script>
+		<script src="app/core/filters/filter-by-discipline.js"></script>
+		<script src="app/core/filters/filter-by-group.js"></script>
+		<script src="app/core/router/router.js"></script>
+		<script src="app/core/state/state.service.js"></script>
+		
+		<!-- Statement-list module -->
+		<script src="app/statement-list/statement-list.module.js"></script>
+		<script src="app/statement-list/statement-list.js"></script>
+		
+		<!-- Statement-detail module -->
+		<script src="app/statement-detail/statement-detail.module.js"></script>
+		<script src="app/statement-detail/statement-detail.js"></script>
+		
+		<!-- Tag-list module -->
+		<script src="app/tag-list/tag-list.module.js"></script>
+		<script src="app/tag-list/tag-list.js"></script>
+		
+		<!-- Interview-list module -->
+		<script src="app/interview-list/interview-list.module.js"></script>
+		<script src="app/interview-list/interview-list.js"></script>
+		
+		<!-- About module -->
+		<script src="app/about/about.module.js"></script>
+		<script src="app/about/about.js"></script>
+		
+		<!-- inject:templates:js -->
+		<!-- endinject -->
+		<!-- endbuild -->
+	</body>
+	
+</html>

@@ -1,0 +1,11 @@
+<div ng-repeat="tag in tags | filter: query | orderBy: '-tagCount' as filtered" class="col-lg-3 col-md-4 col-sm-6">
+<!-- 	<div class="tag-entry"><span class="cursor-pointer" ng-click="go(tag.tagName)">{{tag.tagName}} <span class="badge">{{tag.tagCount}}</span></span></div> -->
+	<button class="btn btn-tag" ng-click="go(tag.tagName)">{{tag.tagName}}&nbsp;<span class="badge">{{tag.tagCount}}</span></button>
+</div>
+
+<!-- Show the following info when there are no search results -->
+<div class="container">
+	<div class="jumbotron" ng-show="tags && !filtered.length">
+		<p class="text-center">Es wurden keine mit Ihrer Suchanfrage übereinstimmenden Tags gefunden.</p>
+	</div>
+</div>

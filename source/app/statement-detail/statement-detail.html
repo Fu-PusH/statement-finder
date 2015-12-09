@@ -1,0 +1,55 @@
+<div class="container-fluid">
+
+
+	<div class="navbar navbar-default navbar-fixed-top">
+		<a class="navbar-brand" href="#/statements"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>&nbsp;Fu-PusH Statement Finder</a>
+	</div>
+
+
+	<div class="panel panel-default single-statement">
+		<div class="panel-heading">
+			<h3 class="panel-title">Statement {{id}} <span data-toggle="modal" data-target=".permalink-modal" class="glyphicon glyphicon-link cursor-pointer statement-link" aria-hidden="true"></span></h3>
+		</div>
+		<div class="panel-body">
+			<p>{{statement.text}}</p>
+		</div>
+		<div class="panel-footer">
+			<p>
+				<span ng-repeat="tag in statement.tags  | orderBy" class="label label-tag cursor-pointer" ng-click="go(tag)">{{tag}}&ensp;</span>
+			</p>
+			<p>
+				<table>
+					<tr>
+						<td>Interview:</td>
+						<td><span class="label label-meta label-table cursor-pointer" ng-click="gotoInterview(statement.interview)">Interview {{statement.interview}}</span></td>
+					</tr>
+					<tr>
+						<td>Gruppe:</td>
+						<td><span class="label label-meta label-table cursor-pointer" ng-click="gotoGroup(statement.group)">{{statement.group}}</span></td>
+					</tr>
+					<tr>
+						<td>Fachgebiet:</td>
+						<td><span class="label label-meta label-table cursor-pointer" ng-click="gotoDiscipline(statement.discipline)">{{statement.discipline}}</span></td>
+					</tr>
+				</table>
+			</p>
+			<div tweet="statement.text" tweet-url="$location.path();"></div>
+		</div>
+	</div>
+	
+	
+	<div class="modal fade permalink-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Permanente URL des Statements {{id}}</h4>
+				</div>
+				<div class="modal-body">
+					{{permanentURL}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

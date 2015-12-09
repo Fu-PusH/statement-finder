@@ -1,0 +1,179 @@
+<div class="container-fluid">
+	
+	<!-- Navigation bar -->
+	<div class="navbar navbar-default navbar-fixed-top">
+		
+		<!-- Brand -->
+		<div class="brand">
+			<h1 class="brand text-center"><a class="brand" href="#/statements">Fu-PusH Statement Finder</a></h1>
+		</div>
+		
+		<!-- Tabs -->
+		<ul class="nav nav-tabs nav-about">
+			<li role="presentation"><a href="#/statements"><span class="hidden-xs">Statements</span><span class="glyphicon glyphicon-list visible-xs-inline"></span></a></li>
+			<li role="presentation"><a href="#/tags"><span class="hidden-xs">Tags</span><span class="glyphicon glyphicon-tags visible-xs-inline"></span></a></li>
+			<li role="presentation"><a href="#/interviews"><span class="hidden-xs">Interviews</span><span class="glyphicon glyphicon-comment visible-xs-inline"></span></a></li>
+			<li role="presentation" class="active"><a href="#/about"><span class="hidden-xs">About</span><span class="glyphicon glyphicon-info-sign visible-xs-inline"></span></a></li>
+		</ul>
+	</div>
+</div>
+	
+<!-- About -->
+<div class="container">
+	<div class="content about">
+		<div class="row">
+			<div class="col-md-2 hidden-md hidden-lg">
+				<img src="images/husiegel.png" class="img-responsive hu-logo center-block" alt="Responsive image">
+			</div>
+			
+			<div class="col-md-10">
+				<h1 class="page-header">DFG-Projekt Future Publications in den Humanities (Fu&#8209;PusH)</h1>
+			</div>
+			
+			<div class="col-md-2 hidden-sm hidden-xs">
+				<img src="images/husiegel.png" class="img-responsive hu-logo" alt="Responsive image">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="page-header">Ziele</h2>
+				<p>
+					Das <a href="http://www2.hu-berlin.de/fupush/" target="_blank">DFG-Projekt Future Publications in den Humanities</a> untersucht die Potentiale des digitalen Publizierens in den Geisteswissenschaften und erarbeitet Handlungsempfehlungen für die bedarfsorientierte Weiterentwicklung von akademischen Informationsinfrastrukturen zur Unterstützung von Publikationsprozessen vor allem an Universitätsbibliotheken und Rechenzentren.
+				</p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-4">
+				<h2 class="page-header">Zeitraum</h2>
+				<p>
+					01. Mai 2014 bis 30. April 2016
+				</p>
+			</div>
+			
+			<div class="col-md-4">
+				<h2 class="page-header">Leitung</h2>
+				<p>
+					Prof. Dr. Andreas Degkwitz, Direktor der Universitätsbibliothek der Humboldt-Universität zu Berlin
+				</p>
+			</div>
+	
+			<div class="col-md-4">
+				<h2 class="page-header">Team</h2>
+				<p>
+					Michael Kleineberg, Ben Kaden, Martin Walk
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="page-header">Experteninterviews</h2>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-linkable list-group-item-fupush" ng-click="gotoGroup('Geisteswissenschaften');"><span class="badge">23</span>Gruppe 1: Geisteswissenschaften</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Ägyptologie');"><span class="badge">1</span>Ägyptologie</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Buchwissenschaft');"><span class="badge">1</span>Buchwissenschaft</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Digital Humanities');"><span class="badge">1</span>Digital Humanities</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Filmwissenschaft');"><span class="badge">1</span>Filmwissenschaft</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Geschichtswissenschaft');"><span class="badge">5</span>Geschichtswissenschaft</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Kulturwissenschaft');"><span class="badge">1</span>Kulturwissenschaft</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Kunstwissenschaft');"><span class="badge">1</span>Kunstwissenschaft</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Literaturwissenschaft');"><span class="badge">5</span>Literaturwissenschaft</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Musikwissenschaft');"><span class="badge">1</span>Musikwissenschaft</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Sprachwissenschaft');"><span class="badge">5</span>Sprachwissenschaft</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Wissenschaftsgeschichte');"><span class="badge">1</span>Wissenschaftsgeschichte</li>
+				</ul>
+			</div>
+			
+			<div class="col-md-6">
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-linkable list-group-item-fupush" ng-click="gotoGroup('Infrastrukturentwicklung');"><span class="badge">20</span>Gruppe 2: Infrastrukturentwicklung</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Bibliothek');"><span class="badge">8</span>Bibliothek</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Informationsinfrastruktur');"><span class="badge">8</span>Informationsinfrastruktur</li>
+					<li class="list-group-item list-group-item-linkable" ng-click="gotoDiscipline('Informationswissenschaft');"><span class="badge">4</span>Informationswissenschaft</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-4">
+				<h2 class="page-header">Stichprobenauswahl</h2>
+				<p>
+					Zielgruppenorientiert (Expertinnen und Experten innerhalb des deutschsprachigen Raums)
+				</p>
+			</div>
+			
+			<div class="col-md-4">
+				<h2 class="page-header">Sozialstatistische Angaben</h2>
+				<ul class="list-inline">
+					<li>männlich <span class="badge">28</span></li>
+					<li>weiblich <span class="badge">15</span></li>
+				</ul>
+				<ul class="list-inline">
+					<li>Prof. <span class="badge">16</span></li>
+					<li>Dr. <span class="badge">13</span></li>
+					<li>MA <span class="badge">14</span></li>
+				</ul>
+			</div>
+			
+			<div class="col-md-4">
+				<h2 class="page-header">Institutionen</h2>
+				<ul class="list-unstyled">
+					<li>Fachinstitute an Universitäten / Fachhochschulen</li>
+					<li>Akademien / Stiftungen</li>
+					<li>Universitätsbibliotheken / Staatsbibliotheken</li>
+					<li>Verlage / Universitätsverlage</li>
+					<li>Digital Humanities-Zentren / Datenzentren / Rechenzentren</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="page-header">Erhebungsmethode</h2>
+				<p>
+					Qualitative und offene Leitfadeninterviews von ein bis zwei Stunden Dauer mit vornehmlich explorativem Charakter. Es wurde ein breites Themenspektrum abgedeckt, das neben technologischen Desiderata hinsichtlich digitaler Arbeits- und Publikationsverfahren auch wissenschaftskulturelle bzw. -politische Rahmenbedingungen einschloss.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="page-header">Leitfragen</h2>
+				<ol>
+					<li>Welche Formen der digitalen Anreicherung (z.B. Daten, Prozesse, Ergebnisse) sollten Bestandteil einer wissenschaftlichen Publikation sein und unter welchen Bedingungen?</li>
+					<li>Welche funktionalen Anforderungen stellen geisteswissenschaftliche Fach-Communities an Informationsinfrastrukturen zur Unterstützung künftiger Publikationsszenarien?</li>
+				</ol>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="page-header">Auswertungsmethode</h2>
+				<p>
+					Die mittels Audioaufnahmen erhobenen Daten wurden als zusammenfassende Protokolle transkribiert und anhand induktiver Kategorienbildung einer qualitativen Inhaltsanalyse unterzogen, um sowohl (fach-)spezifische als auch übergreifende Trends zu ermitteln.
+				</p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default panel-about">
+					<div class="panel-heading">
+						<h3 class="panel-title">Exemplarisches Interview (Audio & Transkription) mit Leitfragebogen</h3>
+					</div>
+					<div class="panel-body">
+						<a href="https://www2.hu-berlin.de/fupush/interview39.html" target="_blank">www2.hu-berlin.de/fupush/interview39.html</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,231 @@
+/* Global rules */
+
+html,
+body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
+	/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -30px;
+}
+
+	/* Set the fixed height of the footer here */
+#push {
+	height: 30px;
+}
+
+footer {
+	height: 30px;
+	background-color: #f5f5f5;
+}
+
+.imprint-link {
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+.navbar {
+	opacity: 0.9;
+}
+
+h1.brand {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	text-shadow: rgba(255, 255, 255, 0.247059) 0px 1px 0px;
+	font-weight: normal;
+}
+
+a.brand {
+	color: rgb(119, 119, 119);
+	font-size: 18px;
+	text-shadow: rgba(255, 255, 255, 0.247059) 0px 1px 0px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.hu-logo {
+	margin-top: 30px;
+}
+
+.searchbar {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.status-bar {
+	margin-left: 30px;
+}
+
+.nav-tabs {
+	margin-left: 15px;
+}
+
+.label {
+	display: inline-block;
+	margin-right: 3px;
+}
+
+.cursor-pointer {
+	cursor:pointer;
+}
+
+.list-group-item-linkable:hover {
+	color: #555;
+	text-decoration: none;
+	background-color: #f5f5f5;
+	cursor: pointer;
+}
+
+.list-group-item-fupush {
+  color: #333;
+  background-color: #f5f5f5;
+  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
+  background-image:      -o-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e8e8e8));
+  background-image:         linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
+  background-repeat: repeat-x;
+}
+a.list-group-item-fupush,
+button.list-group-item-fupush {
+  color: #333;
+}
+a.list-group-item-fupush .list-group-item-heading,
+button.list-group-item-fupush .list-group-item-heading {
+  color: inherit;
+}
+
+.content {
+	padding-top: 200px;
+}
+
+.label-tag {
+  background-color: #5b8e58;
+}
+.label-tag:hover,
+.label-tag:focus {
+  background-color: #3f623d;
+}
+
+.label-meta {
+  background-color: #5c6d9f;
+}
+.label-meta:hover,
+.label-meta:focus {
+  background-color: #3d4869;
+}
+
+
+.btn-tag { 
+  color: #ffffff; 
+  background-color: #5b8e58; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-tag:hover, 
+.btn-tag:focus, 
+.btn-tag:active, 
+.btn-tag.active, 
+.open .dropdown-toggle.btn-tag { 
+  color: #ffffff; 
+  background-color: #3f623d; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-tag:active, 
+.btn-tag.active, 
+.open .dropdown-toggle.btn-tag { 
+  background-image: none; 
+} 
+ 
+.btn-tag.disabled, 
+.btn-tag[disabled], 
+fieldset[disabled] .btn-tag, 
+.btn-tag.disabled:hover, 
+.btn-tag[disabled]:hover, 
+fieldset[disabled] .btn-tag:hover, 
+.btn-tag.disabled:focus, 
+.btn-tag[disabled]:focus, 
+fieldset[disabled] .btn-tag:focus, 
+.btn-tag.disabled:active, 
+.btn-tag[disabled]:active, 
+fieldset[disabled] .btn-tag:active, 
+.btn-tag.disabled.active, 
+.btn-tag[disabled].active, 
+fieldset[disabled] .btn-tag.active { 
+  background-color: #5b8e58; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-tag .badge { 
+  color: #5b8e58; 
+  background-color: #ffffff; 
+}
+
+.btn-tag:hover .badge,
+.btn-tag:focus .badge,
+.btn-tag:active .badge
+ {
+	color: #3f623d;
+}
+
+/* Statement list */
+
+/* Tag list and interview list */
+
+.tag-list {
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+.tag-entry {
+	margin-bottom: 5px;
+}
+
+.interview-entry {
+	margin-bottom: 5px;
+}
+
+.order-by {
+	margin-bottom: 20px;
+}
+
+/* Statement detail */
+.single-statement {
+	margin-top: 90px;
+	margin-bottom: 10px;
+	max-width: 700px;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.statement-link {
+	float: right;
+}
+
+.label-table {
+	margin-left: 5px;
+}
+
+/* About and Imprint */
+.about {
+	margin-left: 15px;
+}
+
+.nav-about {
+	margin-top: 106px;
+}
+
+.panel-about {
+	margin-top: 40px;
+}
