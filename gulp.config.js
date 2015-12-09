@@ -16,7 +16,7 @@ module.exports = function() {
 		images: source + 'images/**/*.*',
 		index: source + 'index.html',
 		temp: temp,
-		
+
 		// template Cache
 		templateCache: {
 			file: 'templates.js',

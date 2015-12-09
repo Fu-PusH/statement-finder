@@ -31,7 +31,6 @@ gulp.task('jscs', function() {
 		.pipe($.jscsStylish());
 });
 
-
 /**
  * Remove all images from the build folder
  */
@@ -50,7 +49,6 @@ gulp.task('images', ['clean-images'], function() {
 		.src(config.images)
 		.pipe(gulp.dest(config.build + 'images'));
 });
-
 
 /**
  * Remove all data files from the build folder
@@ -73,8 +71,6 @@ gulp.task('data', ['clean-data'], function() {
 		.pipe(gulp.dest(config.build + 'data'));
 });
 
-
-
 /**
  * Remove all js and html from the build and temp folders
  */
@@ -86,7 +82,6 @@ gulp.task('clean-code', function() {
 	);
 	return clean(files);
 });
-
 
 /**
  * Create $templateCache from the html templates
@@ -105,7 +100,6 @@ gulp.task('templatecache', ['clean-code'], function() {
 		.pipe(gulp.dest(config.temp));
 });
 
-
 /**
  * Optimize all files, move to a build folder,
  * and inject them into the new index.html
@@ -113,29 +107,18 @@ gulp.task('templatecache', ['clean-code'], function() {
  */
 gulp.task('optimize', ['templatecache','images','data'], function() {
 	log('Optimizing the js, css, and html');
-	
+
 	var templateCache = config.temp + config.templateCache.file;
-// 	var templateCache = './.tmp/templates.js';
-/*
-	var templateCache = '../.tmp/templates.js';
-	console.log('templateCache: '+ templateCache);
-	var templateCacheFile = gulp.src(templateCache, {read:false});
-	console.log('templateCacheFile: '+ templateCacheFile);
-*/
 
 	return gulp
 		.src(config.index)
 		.pipe($.plumber())
 		.pipe($.inject(gulp.src(templateCache, {read: false}, {ignorePath: 'source'}), {
-			starttag: '<!-- inject:templates:js -->'
-		}))
-		// Apply the concat and file replacement with useref
-		.pipe($.useref({ searchPath: ['', '.tmp', 'source'] }))
+			starttag: '<!-- inject:templates:js -->'}))
+		.pipe($.useref({searchPath: ['', '.tmp', 'source']}))
 		.pipe($.if('*.js', $.uglify()))
 		.pipe($.if('*.css', $.csso()))
 		.pipe($.if('index.html', $.minifyHtml({empty: true})))
-// 		.pipe($.useref({ searchPath: ['./'] }))
-		// Write to build folder
 		.pipe(gulp.dest(config.build));
 });
 
