@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.35118.svg)](http://dx.doi.org/10.5281/zenodo.35118)
+
 # Fu-PusH Statement Finder
 
 Fu-PusH Statement Finder presents a collection of interview statements as a website.  
