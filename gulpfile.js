@@ -105,8 +105,8 @@ gulp.task('templatecache', ['clean-code'], function() {
  * and inject them into the new index.html
  * @return {Stream}
  */
-gulp.task('optimize', ['templatecache','images','data'], function() {
-	log('Optimizing the js, css, and html');
+gulp.task('build', ['templatecache','images','data'], function() {
+	log('Optimizing the js, css, and html and moving them to build folder');
 
 	var templateCache = config.temp + config.templateCache.file;
 
@@ -126,15 +126,15 @@ gulp.task('optimize', ['templatecache','images','data'], function() {
  * Serve development or build version of the app
  */
 gulp.task('serve-dev', function () {
-	log('Serving development...');
+	log('Serving development');
 	$.connect.server({
 		root: 'source/',
 		port: 8888
 	});
 });
 
-gulp.task('serve-build', ['optimize'], function () {
-	log('Serving release build...');
+gulp.task('serve-build', ['build'], function () {
+	log('Serving release build');
 	$.connect.server({
 		root: 'build/',
 		port: 9999
