@@ -1,8 +1,8 @@
 # Fu-PusH Statement Finder
 
-Fu-PusH Statement Finder presents a collection of interview statements as a website.	
-It offers searching the collection and filtering statements by one or multiple tags and by interview metadata.	
-Each single statement is available via a static URL to facilitate citation.	
+Fu-PusH Statement Finder presents a collection of interview statements as a website.  
+It offers searching the collection and filtering statements by one or multiple tags and by interview metadata.  
+Each single statement is available via a static URL to facilitate citation.  
 Metadata filters can be addressed via URL query strings.
 
 ## Software
@@ -106,9 +106,9 @@ Copyright (c) 2015 University Library of Humboldt-Universität zu Berlin
 
 ###You are free to:
 
-Share — copy and redistribute the material in any medium or format	
-Adapt — remix, transform, and build upon the material for any purpose, even commercially.	
-The licensor cannot revoke these freedoms as long as you follow the license terms.
+Share — copy and redistribute the material in any medium or format  
+Adapt — remix, transform, and build upon the material for any purpose, even commercially.  
+The licensor cannot revoke these freedoms as long as you follow the license terms.  
 
 ###Under the following terms:
 
