@@ -7,6 +7,8 @@ It offers searching the collection and filtering statements by one or multiple t
 Each single statement is available via a static URL to facilitate citation.  
 Metadata filters can be addressed via URL query strings.
 
+This repository contains the software as well as the data set of interview statements.
+
 ## Software
 
 Fu-PusH Statement Finder is a web front-end written in HTML, CSS and Javascript using the AngularJS framework.
