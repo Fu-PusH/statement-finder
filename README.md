@@ -9,6 +9,8 @@ Metadata filters can be addressed via URL query strings.
 
 This repository contains the software as well as the data set of interview statements.
 
+Use an instance of Statement Finder at: [http://www2.hu-berlin.de/fupush/statement-finder](http://www2.hu-berlin.de/fupush/statement-finder).
+
 ## Software
 
 Fu-PusH Statement Finder is a web front-end written in HTML, CSS and Javascript using the AngularJS framework.
