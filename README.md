@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.35118.svg)](http://dx.doi.org/10.5281/zenodo.35118)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.35233.svg)](http://dx.doi.org/10.5281/zenodo.35233)
 
 # Fu-PusH Statement Finder
 
