@@ -39,13 +39,13 @@
 	
 	<!-- List of search results -->
 	<div class="list-group content">
-		<div dir-paginate="statement in filtered = (statements | filter:query | filterByGroup:groupTag.name | filterByDiscipline:disciplineTag.name | filterByInterview:interviewTag.number | filterByTag:filterTags) | itemsPerPage: 100" class="list-group-item list-group-item-linkable" ng-click="go(statement.id)">
+		<a dir-paginate="statement in filtered = (statements | filter:query | filterByGroup:groupTag.name | filterByDiscipline:disciplineTag.name | filterByInterview:interviewTag.number | filterByTag:filterTags) | itemsPerPage: 100" class="list-group-item list-group-item-linkable" ng-href="#/statement/{{statement.id}}">
 			<p ng-bind="statement.text"></p>
 			<p>
 				<span class="label label-default">Statement <span ng-bind="statement.id"></span></span>
-				<span ng-repeat="tag in statement.tags | orderBy" class="label label-tag cursor-pointer" ng-click="filterBy(tag); $event.stopPropagation();"><span ng-bind="tag"></span>&ensp;</span>
+				<span ng-repeat="tag in statement.tags | orderBy" class="label label-tag cursor-pointer" ng-click="filterBy(tag); $event.stopPropagation(); $event.preventDefault();"><span ng-bind="tag"></span>&ensp;</span>
 			</p>
-		</div>
+		</a>
 	</div>
 	
 	<div class="text-center">

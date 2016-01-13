@@ -66,10 +66,6 @@
 			$scope.updateURL();
 		};
 
-		$scope.go = function(statementID) {
-			$window.location.hash = '/statement/' + statementID;
-		};
-
 		$scope.clearInterviewTag = function() {
 			stateService.clearInterviewTag();
 			$scope.updateURL();
