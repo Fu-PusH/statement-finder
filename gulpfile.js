@@ -23,7 +23,7 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('jscs', function() {
-	log('Analyzing source with JSCS and JSHint');
+	log('Analyzing source with JSCS');
 
 	return gulp
 		.src(config.allJSToLint)
