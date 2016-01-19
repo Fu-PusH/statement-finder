@@ -15,7 +15,7 @@
 		
 		<div class="input-group input-group-lg searchbar hidden-xs">
 			<span class="input-group-addon">Suche Statement</span>
-			<input ng-model="query.text" type="search" class="form-control" placeholder="Suchbegriff eingeben">
+			<input ng-model="query" type="search" class="form-control" placeholder="Suchbegriff oder Statement-Nummer eingeben">
 		</div>
 		
 		<!-- Status Bar -->
@@ -39,7 +39,7 @@
 	
 	<!-- List of search results -->
 	<div class="list-group content">
-		<a dir-paginate="statement in filtered = (statements | filter:query | filterByGroup:groupTag.name | filterByDiscipline:disciplineTag.name | filterByInterview:interviewTag.number | filterByTag:filterTags) | itemsPerPage: 100" class="list-group-item list-group-item-linkable" ng-href="#/statement/{{statement.id}}">
+		<a dir-paginate="statement in filtered = (statements | filterByTextOrId:query | filterByGroup:groupTag.name | filterByDiscipline:disciplineTag.name | filterByInterview:interviewTag.number | filterByTag:filterTags) | itemsPerPage: 100" class="list-group-item list-group-item-linkable" ng-href="#/statement/{{statement.id}}">
 			<p ng-bind="statement.text"></p>
 			<p>
 				<span class="label label-default">Statement <span ng-bind="statement.id"></span></span>
